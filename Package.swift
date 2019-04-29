@@ -21,7 +21,7 @@
 import PackageDescription
 
 #if os(Linux)
-	let cOpenSSLRepo = "https://github.com/PerfectlySoft/Perfect-COpenSSL-Linux.git"
+	let cOpenSSLRepo = "https://github.com/123FLO321/Perfect-COpenSSL-Linux.git"
 #else
 	let cOpenSSLRepo = "https://github.com/PerfectlySoft/Perfect-COpenSSL.git"
 #endif
