@@ -1,29 +1,11 @@
-// swift-tools-version:5.1
-//
-//  Package.swift
-//  PerfectCrypto
-//
-//  Created by Kyle Jessup on 2017-02-07.
-//	Copyright (C) 2017 PerfectlySoft, Inc.
-//
-//===----------------------------------------------------------------------===//
-//
-// This source file is part of the Perfect.org open source project
-//
-// Copyright (c) 2015 - 2017 PerfectlySoft Inc. and the Perfect project authors
-// Licensed under Apache License v2.0
-//
-// See http://perfect.org/licensing.html for license information
-//
-//===----------------------------------------------------------------------===//
-//
+// swift-tools-version:5.2
 
 import PackageDescription
 
 #if os(Linux)
-	let cOpenSSLRepo = "https://github.com/PerfectlySoft/Perfect-COpenSSL-Linux.git"
+	let cOpenSSLRepo = "https://github.com/123FLO321/Perfect-COpenSSL-Linux.git"
 #else
-	let cOpenSSLRepo = "https://github.com/PerfectlySoft/Perfect-COpenSSL.git"
+	let cOpenSSLRepo = "https://github.com/123FLO321/Perfect-COpenSSL.git"
 #endif
 
 let package = Package(
@@ -35,9 +17,9 @@ let package = Package(
 		.library(name: "PerfectCrypto", targets: ["PerfectCrypto"])
 	],
     dependencies: [
-		.package(url: "https://github.com/PerfectlySoft/PerfectLib.git", from: "4.0.0"),
-		.package(url: "https://github.com/PerfectlySoft/Perfect-Thread.git", from: "3.0.0"),
-		.package(url: cOpenSSLRepo, from: "4.0.0")
+        .package(name: "PerfectLib", url: "https://github.com/123FLO321/Perfect.git", .branch("swift5")),
+        .package(name: "PerfectThread", url: "https://github.com/123FLO321/Perfect-Thread.git", .branch("swift5")),
+        .package(name: "COpenSSL", url: cOpenSSLRepo, .branch("swift5"))
 	],
 	targets: [
 		.target(name: "PerfectCrypto", dependencies: ["PerfectLib", "PerfectThread", "COpenSSL"]),
