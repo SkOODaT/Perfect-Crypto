@@ -3,9 +3,9 @@
 import PackageDescription
 
 #if os(Linux)
-	let cOpenSSLRepo = "https://github.com/123FLO321/Perfect-COpenSSL-Linux.git"
+	let cOpenSSLRepo = "https://github.com/SkOODaT/Perfect-COpenSSL-Linux.git"
 #else
-	let cOpenSSLRepo = "https://github.com/123FLO321/Perfect-COpenSSL.git"
+	let cOpenSSLRepo = "https://github.com/SkOODaT/Perfect-COpenSSL.git"
 #endif
 
 let package = Package(
@@ -17,9 +17,9 @@ let package = Package(
 		.library(name: "PerfectCrypto", targets: ["PerfectCrypto"])
 	],
     dependencies: [
-        .package(name: "PerfectLib", url: "https://github.com/123FLO321/Perfect.git", .branch("swift5")),
-        .package(name: "PerfectThread", url: "https://github.com/123FLO321/Perfect-Thread.git", .branch("swift5")),
-        .package(name: "COpenSSL", url: cOpenSSLRepo, .branch("swift5"))
+        .package(name: "PerfectLib", url: "https://github.com/SkOODaT/Perfect.git", .branch("SKOODAT")),
+        .package(name: "PerfectThread", url: "https://github.com/SkOODaT/Perfect-Thread.git", .branch("SKOODAT")),
+        .package(name: "COpenSSL", url: cOpenSSLRepo, .branch("SKOODAT"))
 	],
 	targets: [
 		.target(name: "PerfectCrypto", dependencies: ["PerfectLib", "PerfectThread", "COpenSSL"]),
